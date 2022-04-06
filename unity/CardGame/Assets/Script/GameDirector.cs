@@ -112,7 +112,7 @@ public class GameDirector : MonoBehaviour
 
     void gameOver()
     {
-        SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameClear");
 
     }
 

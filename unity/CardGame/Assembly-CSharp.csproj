@@ -66,12 +66,19 @@
     <Compile Include="Assets\Script\rotation1.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\DLL\I18N.MidEast.dll" />
+    <None Include="Assets\DLL\I18N.Rare.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\link.xml" />
+    <None Include="Assets\DLL\I18N.CJK.dll" />
+    <None Include="Assets\DLL\I18N.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.dll" />
+    <None Include="Assets\DLL\I18N.West.dll" />
     <None Include="Assets\FlutterUnityIntegration\README.txt" />
+    <None Include="Assets\DLL\I18N.Other.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.XML" />
+    <None Include="Assets\DLL\MySql.Data.dll" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\AOT\Newtonsoft.Json.XML" />
     <None Include="Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Windows\Newtonsoft.Json.XML" />
     <None Include="Assets\FlutterUnityIntegration\link.xml" />
@@ -256,6 +263,27 @@
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.MidEast">
+      <HintPath>Assets\DLL\I18N.MidEast.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.West">
+      <HintPath>Assets\DLL\I18N.West.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Other">
+      <HintPath>Assets\DLL\I18N.Other.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N">
+      <HintPath>Assets\DLL\I18N.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Rare">
+      <HintPath>Assets\DLL\I18N.Rare.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.CJK">
+      <HintPath>Assets\DLL\I18N.CJK.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data">
+      <HintPath>Assets\DLL\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.34f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>
