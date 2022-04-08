@@ -37,4 +37,9 @@ public class SceneChange : MonoBehaviour
         SceneManager.LoadScene("EasyLevel"); //씬전환
         DontDestroyOnLoad(Click); // 해당 오브젝트를 다른 씬에서 접근하여 사용하기 위하여 오브젝트 파괴하지 않고 유지
     }
+
+    public void replay()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
 }

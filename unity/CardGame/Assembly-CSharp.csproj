@@ -56,6 +56,7 @@
     <Compile Include="Assets\FlutterUnityIntegration\NativeAPI.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\SingletonMonoBehaviour.cs" />
     <Compile Include="Assets\FlutterUnityIntegration\UnityMessageManager.cs" />
+    <Compile Include="Assets\Script\BackGround.cs" />
     <Compile Include="Assets\Script\BackMove.cs" />
     <Compile Include="Assets\Script\BuildGame.cs" />
     <Compile Include="Assets\Script\CardInfo.cs" />
@@ -261,29 +262,29 @@
     <Reference Include="UnityEditor">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.34f1\Editor\Data\Managed\UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
-    </Reference>
-    <Reference Include="I18N.MidEast">
-      <HintPath>Assets\DLL\I18N.MidEast.dll</HintPath>
-    </Reference>
-    <Reference Include="I18N.West">
-      <HintPath>Assets\DLL\I18N.West.dll</HintPath>
-    </Reference>
-    <Reference Include="I18N.Other">
-      <HintPath>Assets\DLL\I18N.Other.dll</HintPath>
+    <Reference Include="I18N.CJK">
+      <HintPath>Assets\DLL\I18N.CJK.dll</HintPath>
     </Reference>
     <Reference Include="I18N">
       <HintPath>Assets\DLL\I18N.dll</HintPath>
     </Reference>
+    <Reference Include="I18N.MidEast">
+      <HintPath>Assets\DLL\I18N.MidEast.dll</HintPath>
+    </Reference>
+    <Reference Include="I18N.Other">
+      <HintPath>Assets\DLL\I18N.Other.dll</HintPath>
+    </Reference>
     <Reference Include="I18N.Rare">
       <HintPath>Assets\DLL\I18N.Rare.dll</HintPath>
     </Reference>
-    <Reference Include="I18N.CJK">
-      <HintPath>Assets\DLL\I18N.CJK.dll</HintPath>
+    <Reference Include="I18N.West">
+      <HintPath>Assets\DLL\I18N.West.dll</HintPath>
     </Reference>
     <Reference Include="MySql.Data">
       <HintPath>Assets\DLL\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Assets\FlutterUnityIntegration\JsonDotNet\Assemblies\Standalone\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:\Program Files\Unity\Hub\Editor\2019.4.34f1\Editor\Data\MonoBleedingEdge\lib\mono\4.7.1-api\mscorlib.dll</HintPath>

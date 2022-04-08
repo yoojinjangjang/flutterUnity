@@ -11,6 +11,11 @@ public class GameDirector : MonoBehaviour
     GameObject[] hit_ob = new GameObject[2]; // 뒤집어진 카드 Object 저장
     Sprite[] check_card = new Sprite[2];     //뒤집어진 카드의 이미지 저장
 
+    AudioSource audioSource;
+    public AudioClip correctAudio;
+    public AudioClip wrongAudio;
+    public AudioClip doneAudio;
+
     public int touch_c = 0;
     public int score = 0;
     public static STATE state = STATE.START;
@@ -26,7 +31,7 @@ public class GameDirector : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        audioSource = this.GetComponent<AudioSource>();
     }
 
     public void Count_minus()
@@ -85,14 +90,20 @@ public class GameDirector : MonoBehaviour
                 touch_c = 0;
                 state = STATE.IDLE;
                 score += 1; // 짝 맞으면 점수 1점씩 더함 총 8카드에서는 4점이 최대
+                audioSource.clip = correctAudio;
+                audioSource.Play();
                 if (score == GetComponent<BuildGame>().level / 2)
                 {
-                    Invoke("gameOver", 1);
+                    audioSource.clip = doneAudio;
+                    audioSource.Play();
+                    Invoke("gameClaer", 2);
                     yield return null;
                 }
             }
             else
             {
+                audioSource.clip = wrongAudio;
+                audioSource.Play();
                 StartCoroutine(hit_ob[0].GetComponent<rotation1>().RotateCard_back());
                 StartCoroutine(hit_ob[1].GetComponent<rotation1>().RotateCard_back());
 
@@ -110,8 +121,9 @@ public class GameDirector : MonoBehaviour
         check_card[touch_c] = worldImage;
     }
 
-    void gameOver()
+    void gameClear()
     {
+        
         SceneManager.LoadScene("GameClear");
 
     }
@@ -122,8 +134,5 @@ public class GameDirector : MonoBehaviour
     }
 
 
-    public void setId(string args)
-    {
-        Debug.Log($"Recived flutter message : {args}");
-    }
+
 }
