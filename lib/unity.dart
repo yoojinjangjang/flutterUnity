@@ -27,10 +27,10 @@ class _UnityDemoScreenState extends State<UnityDemoScreen>{
   late UnityWidgetController _unityWidgetController;
 
 
+
   Widget build(BuildContext context) {
 
-
-
+    //ystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight,DeviceOrientation.landscapeRight]);
     return Scaffold(
       key: _scaffoldKey,
       body: SafeArea(
@@ -99,23 +99,23 @@ class _UnityDemoScreenState extends State<UnityDemoScreen>{
 //
 // }
 
-// class SecondRoute extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text("Second Route"),
-//       ),
-//       body: Center(
-//         child: RaisedButton(
-//           onPressed: () {
-//             Navigator.push(
-//                 context, MaterialPageRoute(builder: (context)=>UnityDemoScreen()));
-//           },
-//           child: Text('Go back!'),
-//         ),
-//       ),
-//     );
-//   }
-// }
+class SecondRoute extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    //SystemChrome.setPreferredOrientations([DeviceOrientation.landscapeRight]);
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Second Route"),
+      ),
+      body: Center(
+        child: RaisedButton(
+          onPressed: () {
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context)=>UnityDemoScreen()));
+          },
+          child: Text('Go back!'),
+        ),
+      ),
+    );
+  }
+}

@@ -96,7 +96,7 @@ public class GameDirector : MonoBehaviour
                 {
                     audioSource.clip = doneAudio;
                     audioSource.Play();
-                    Invoke("gameClaer", 2);
+                    Invoke("gameClear", 2);
                     yield return null;
                 }
             }

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_unity_widget/flutter_unity_widget.dart';
 import 'unity.dart';
-import 'package:get/get.dart';
+
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return GetMaterialApp(
+    return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -68,7 +68,7 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
 
-    SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
+    //SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
     return  Scaffold(
       appBar: AppBar(
@@ -78,10 +78,12 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ElevatedButton(
           child: Text("Play Game"),
           onPressed: () {
-            // Navigator.push(
-            //   context, MaterialPageRoute(builder: (context)=>UnityDemoScreen())); },
-            Get.off(() => UnityDemoScreen());
-          },
+             Navigator.push(
+             context, MaterialPageRoute(builder: (context)=>UnityDemoScreen(),fullscreenDialog: true)
+              );
+             },
+            //Get.off(() => UnityDemoScreen());
+         // },
         ),
       ),
     );

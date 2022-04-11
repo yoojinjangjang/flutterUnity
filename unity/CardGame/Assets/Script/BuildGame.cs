@@ -313,12 +313,12 @@ public class BuildGame : MonoBehaviour
 
 
         // 아래 코드 이미지 구성시 삭제
-        List<string> quarys = new List<string>();
+       // List<string> quarys = new List<string>();
 
         // 학습한 영단어 리스트 이미지 구성시 사용
-        //List<string> englishs = new List<string>();
+        List<string> englishs = new List<string>();
 
-        id = "yoojinjangjang";
+       // id = "yoojinjangjang";
         string quary = string.Format("select english from my_voca where user_id = '{0}';", id);
         MySqlCommand command = new MySqlCommand(quary, conn);
         MySqlDataReader rdr = command.ExecuteReader();
@@ -328,47 +328,48 @@ public class BuildGame : MonoBehaviour
             {
                 
                 Debug.Log(rdr[i]);
-                // 아래 코드 이미지 구성시 삭제 
+/*                // 아래 코드 이미지 구성시 삭제 
                 string quary2 = string.Format("select id from voca where english = '{0}';", rdr[i]);
-                quarys.Add(quary2);
+                quarys.Add(quary2);*/
 
-               // englishs.Add((string)rdr[i]); // 이미지 구성시 사용
+               englishs.Add((string)rdr[i]); // 이미지 구성시 사용
             }
         }
         rdr.Close();
 
 
-      /*    이미지 모두 구성완료한 후 실행할 코드 
-       
+       // 이미지 모두 구성완료한 후 실행할 코드
+
+
          for (int i = 0; i < englishs.Count; i++)
-        {   
-            string name = string.Format("images/{0}",englishs[i]);
+        {
+            string name = string.Format("images/{0}", englishs[i]);
             spr.Add(Resources.Load<Sprite>(name));  // english 이름으로 image 가져오기
         }
-*/
+
 
         // 테스트를 위한 코드 이미지 구성시 삭제 함 
-        for (int i = 0; i < quarys.Count; i++)
-        {
-            command.CommandText = quarys[i];
-
-            rdr = command.ExecuteReader();
-            while (rdr.Read())
-            {
-                Debug.Log((int)rdr[0]);
-                if ((int)rdr[0] > 901 && (int)rdr[0] < 960)
+        /*        for (int i = 0; i < quarys.Count; i++)
                 {
-                    string name = string.Format("images/abeec ({0})", (int)rdr[0]-900);
-                    spr.Add(Resources.Load<Sprite>(name));
+                    command.CommandText = quarys[i];
+
+                    rdr = command.ExecuteReader();
+                    while (rdr.Read())
+                    {
+                        Debug.Log((int)rdr[0]);
+                        if ((int)rdr[0] > 901 && (int)rdr[0] < 960)
+                        {
+                            string name = string.Format("images/abeec ({0})", (int)rdr[0]-900);
+                            spr.Add(Resources.Load<Sprite>(name));
+                        }
+
+
+
+                    }
+                    rdr.Close();
+
                 }
-
-                
-
-            }
-            rdr.Close();
-            
-        }
-
+        */
 
 
 
